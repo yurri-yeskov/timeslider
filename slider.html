@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <style>
+
+        body {
+            margin: 100px 100px;
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 1.1em;
+        }
+
+        .container {
+            margin-bottom: 3em;
+            height: 50px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="slider.css" />
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.js"></script>
+    <script src="slider.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="slider1"></div>
+    </div>
+    <script>
+        var ts = new mt.TimeSlider('#slider1');
+
+        ts.onChange(function (value) {
+            console.warn("Value changed to", value);
+        });
+    </script>
+</body>

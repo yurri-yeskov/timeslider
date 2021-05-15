@@ -1,0 +1,154 @@
+.time-slider {
+    margin: 0 .6em .6em .6em;
+    padding-top: 3em;
+    cursor: pointer;
+    position: relative;
+}
+
+.time-slider .slider .area {
+    position: relative;
+    border: 1px solid #707077;
+    border-left: none;
+    z-index: 2;
+    height: .4em;
+    top: -.3em;
+    cursor: pointer;
+    background: #707077;
+}
+
+.time-slider .slider .slice {
+    background: #6c6;
+    background: linear-gradient(to bottom, #6c6 0%, #1c1 100%);
+    left: 0px;
+    right: 0px;
+    height: 0.4em;
+    position: absolute;
+
+    /* click events should happen only in the slider to get the correct coordinates */
+    pointer-events: none;
+}
+
+.time-slider .slider .handle {
+    position: absolute;
+    width: .5em;
+    height: .5em;
+    border: .3em solid #707077;
+    border-radius: .8em;
+    background: #6c6;
+    background: linear-gradient(to bottom, #6c6 0%, #1c1 100%);
+    z-index: 3;
+    top: -.39em;
+    margin-right: -.5em;
+    margin-bottom: -.6em;
+    cursor: ew-resize;
+}
+
+.time-slider .slider .handle.active {
+    border-color: #6c6;
+    background: #e0e0e0;
+}
+
+.time-slider .slider .handle.from {
+    margin-left: .6em;
+}
+
+.time-slider .slider .handle.until {
+
+}
+
+
+
+/* Axis */
+
+.time-slider .axis {
+    stroke-width: 2px;
+}
+
+.time-slider .axis path {
+    stroke-width: 0;
+    fill: none;
+}
+
+.time-slider .axis line {
+    fill: none;
+    stroke: #aaa;
+    shape-rendering: crispEdges;
+}
+
+.time-slider .axis text {
+    font-size: .7em;
+}
+
+
+
+/* Tooltips */
+
+.time-slider .tooltips {
+
+}
+
+.time-slider .tooltips a {
+    color: #66f;
+    visibility: hidden;
+}
+
+.time-slider .tooltips a:hover {
+    color: #00f;
+    text-decoration: underline;
+}
+
+.time-slider .tooltips div:hover a {
+    visibility: visible;
+}
+
+.time-slider .tooltips > div {
+    position: absolute;
+    top: 0;
+}
+
+.time-slider .tooltips .dt {
+    background: #fbfbfb;
+    padding: .6em;
+    font-size: .7em;
+    vertical-align: middle;
+    line-height: 1em;
+    white-space: nowrap;
+    border-radius: .3em;
+    border: 1px solid transparent;
+}
+
+.time-slider .tooltips span, .time-slider .tooltips a {
+/*    float: left;*/
+/*    clear: both;*/
+}
+
+.time-slider .tooltips .active {
+}
+
+.time-slider .tooltips .active .dt {
+    border-color: #e0e0e0;
+    background: #f0f0f0;
+}
+
+.time-slider .tooltips .from {
+    left: 0;
+    /*padding-left: 0;*/
+    /*border-right: 1px dotted #e0e0e0;*/
+}
+
+.time-slider .tooltips .until {
+    right: 0;
+    /*padding-right: 0;*/
+    /*border-left: 1px dotted #e0e0e0;*/
+}
+
+.time-slider .tooltips .mouse {
+    border: 1px solid #ddd;
+    background: #fafafa;
+    top: 65px;
+    color: #000;
+    margin-left: 20px;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: .7;
+}

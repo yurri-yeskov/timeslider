@@ -1,0 +1,21 @@
+{
+  "name": "time-slider-js",
+  "version": "0.0.0",
+  "private": true,
+  "main": [
+    "release"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src"
+  ],
+  "dependencies": {
+    "angular": "1.2.*",
+    "d3": "3.*",
+    "lodash": "~2.*",
+    "momentjs": "~2.7.0"
+  },
+  "devDependencies": {}
+}
